@@ -205,7 +205,7 @@ export class SwaggerExplorer {
     return {
       method: RequestMethod[requestMethod].toLowerCase(),
       path: fullPath === '' ? '/' : fullPath,
-      operationId: method.name
+      operationId: `${prototype.constructor.name}-${method.name}`
     };
   }
 
